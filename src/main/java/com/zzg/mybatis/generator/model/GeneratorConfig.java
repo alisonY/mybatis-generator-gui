@@ -43,13 +43,22 @@ public class GeneratorConfig {
 	private boolean needToStringHashcodeEquals;
 
 	private boolean annotation;
-
+	
 	private boolean useActualColumnNames;
 
 	private String generateKeys;
 
     private String encoding;
-
+    
+    
+    private boolean selectByExample;
+    
+    private boolean deleteByExample;
+    
+    private boolean updateByExample;
+    
+    private boolean countByExample;
+    
 	public String getName() {
 		return name;
 	}
@@ -201,4 +210,36 @@ public class GeneratorConfig {
     public void setEncoding(String encoding) {
         this.encoding = encoding;
     }
+
+	public boolean isSelectByExample() {
+		return selectByExample;
+	}
+
+	public void setSelectByExample(boolean selectByExample) {
+		this.selectByExample = selectByExample;
+	}
+
+	public boolean isDeleteByExample() {
+		return deleteByExample;
+	}
+
+	public void setDeleteByExample(boolean deleteByExample) {
+		this.deleteByExample = deleteByExample;
+	}
+
+	public boolean isUpdateByExample() {
+		return updateByExample;
+	}
+
+	public void setUpdateByExample(boolean updateByExample) {
+		this.updateByExample = updateByExample;
+	}
+
+	public boolean isCountByExample() {
+		return countByExample;
+	}
+
+	public void setCountByExample(boolean countByExample) {
+		this.countByExample = countByExample;
+	}
 }

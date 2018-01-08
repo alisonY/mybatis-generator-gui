@@ -127,6 +127,19 @@ public class MybatisGeneratorBridge {
             commentConfig.addProperty("annotations", "true");
         }
         context.setCommentGeneratorConfiguration(commentConfig);
+        
+        if (!generatorConfig.isSelectByExample()) {
+        	tableConfig.setSelectByExampleStatementEnabled(false);
+        }
+		if (!generatorConfig.isUpdateByExample()) {
+			tableConfig.setUpdateByExampleStatementEnabled(false);
+		}
+		if (!generatorConfig.isDeleteByExample()) {
+			tableConfig.setDeleteByExampleStatementEnabled(false);
+		}
+		if (!generatorConfig.isCountByExample()) {
+			tableConfig.setCountByExampleStatementEnabled(false);
+		}
         // set java file encoding
         context.addProperty(PropertyRegistry.CONTEXT_JAVA_FILE_ENCODING, generatorConfig.getEncoding());
         

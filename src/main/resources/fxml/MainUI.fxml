@@ -9,7 +9,7 @@
 <?import javafx.scene.text.Font?>
 <?import java.lang.*?>
 
-<BorderPane prefHeight="613.0" prefWidth="918.0" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.zzg.mybatis.generator.controller.MainUIController">
+<BorderPane prefHeight="713.0" prefWidth="918.0" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.zzg.mybatis.generator.controller.MainUIController">
     <top>
         <VBox>
             <children>
@@ -169,7 +169,7 @@
                                  <GridPane.margin>
                                     <Insets left="5.0" />
                                  </GridPane.margin></TextField>
-                              <VBox prefHeight="53.0" prefWidth="536.0" spacing="10.0" GridPane.columnIndex="1" GridPane.columnSpan="4" GridPane.rowIndex="7">
+                              <VBox prefHeight="100.0" prefWidth="536.0" spacing="10.0" GridPane.columnIndex="1" GridPane.columnSpan="4" GridPane.rowIndex="7">
                                  <children>
                                     <HBox alignment="CENTER_LEFT">
                                        <children>
@@ -179,21 +179,30 @@
                                     </HBox>
                                     <HBox alignment="CENTER_LEFT" spacing="10.0" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="8">
                                        <children>
-                                          <CheckBox fx:id="offsetLimitCheckBox" minWidth="100.0" mnemonicParsing="false" selected="true" text="分页" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                                          <CheckBox fx:id="needToStringHashcodeEquals" mnemonicParsing="false" selected="false" text="生成toString/hashCode/equals方法" />
                                           <CheckBox fx:id="commentCheckBox" mnemonicParsing="false" selected="true" text="生成实体域注释(来自表注释)" />
+                                          <CheckBox fx:id="offsetLimitCheckBox" minWidth="100.0" mnemonicParsing="false" selected="false" text="分页" GridPane.columnIndex="1" GridPane.rowIndex="8" />
                                        </children>
                                     </HBox>
                                     <HBox>
-                                       <children>
-                                          <CheckBox fx:id="needToStringHashcodeEquals" mnemonicParsing="false" selected="true" text="生成toString/hashCode/equals方法" />
-                                       </children>
-                                    </HBox>
-                                    <HBox spacing="18.0">
                                        <children>
                                           <CheckBox fx:id="annotationCheckBox" mnemonicParsing="false" selected="false" text="生成JPA注解" />
                                           <CheckBox fx:id="useActualColumnNamesCheckbox" mnemonicParsing="false" selected="false" text="使用实际的列名" />
                                        </children>
                                     </HBox>
+                                    <HBox spacing="18.0">
+                                       <children>
+                                          <CheckBox fx:id="selectByExample" mnemonicParsing="false" selected="true" text="生成selectByExample" />
+                                          <CheckBox fx:id="countByExample" mnemonicParsing="false" selected="true" text="生成countByExample" />
+                                       </children>
+                                    </HBox>
+                                    <HBox spacing="18.0">
+                                       <children>
+                                          <CheckBox fx:id="deleteByExample" mnemonicParsing="false" selected="true" text="生成deleteByExample" />
+                                          <CheckBox fx:id="updateByExample" mnemonicParsing="false" selected="true" text="生成updateByExample" />
+                                       </children>
+                                    </HBox>
+                                    
                                  </children>
                                  <padding>
                                     <Insets left="5.0" />

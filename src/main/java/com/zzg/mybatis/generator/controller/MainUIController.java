@@ -89,6 +89,16 @@ public class MainUIController extends BaseFXController {
 
     @FXML
     private ChoiceBox<String> encodingChoice;
+    
+    @FXML
+    private CheckBox selectByExample;
+    @FXML
+    private CheckBox updateByExample;
+    @FXML
+    private CheckBox deleteByExample;
+    @FXML
+    private CheckBox countByExample;
+    
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -307,6 +317,12 @@ public class MainUIController extends BaseFXController {
         generatorConfig.setAnnotation(annotationCheckBox.isSelected());
         generatorConfig.setUseActualColumnNames(useActualColumnNamesCheckbox.isSelected());
         generatorConfig.setEncoding(encodingChoice.getValue());
+
+        generatorConfig.setSelectByExample(selectByExample.isSelected());
+        generatorConfig.setUpdateByExample(updateByExample.isSelected());
+        generatorConfig.setDeleteByExample(deleteByExample.isSelected());
+        generatorConfig.setCountByExample(countByExample.isSelected());
+        
         return generatorConfig;
     }
 
